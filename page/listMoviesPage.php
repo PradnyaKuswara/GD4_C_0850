@@ -8,6 +8,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 
     <div class="body d-flex justify-content-between">
         <h4>LIST MOVIE</h4>
+        <a href="./addMoviesPage.php"><i class="fa fa-plus-square-o fa-2x" style="color: red;"></i></a>
     </div>
     <hr>
     <table class="table">
@@ -36,6 +37,12 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                             <td>'.$data['genre'].'</td>
                             <td>'.$data['realese'].'</td>
                             <td>'.$data['season'].'</td>
+                            <td>
+                                <a href="../page/editMoviesPage.php?id='.$data['id'].'" 
+                                onClick="return confirm ( \'Are you sure want to edit this 
+                                data?\')"> <i style="color: green" class="fa fa-pencil fa-2x"></i>
+                            </a>
+                            </td>
                             <td>
                                 <a href="../process/deleteMovieProcess.php?id='.$data['id'].'" 
                                 onClick="return confirm ( \'Are you sure want to delete this 
